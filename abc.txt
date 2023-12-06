@@ -1,4 +1,3 @@
-<<<<<<< ours
 1-add account(hassan)
 
 2-Feedback form(Noor)
@@ -17,3 +16,4 @@
    Once she is satisfied with her feedback, Sarah hits the "Submit" button. The system prompts his for confirmation to avoid accidental submissions.
 
 3-admin can add user(zoella)
+

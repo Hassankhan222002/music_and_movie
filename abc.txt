@@ -1,0 +1,18 @@
+<<<<<<< ours
+1-add account(hassan)
+
+2-Feedback form(Noor)
+#Feedback form
+
+1. Selecting the Content:
+   He chooses the specific music album and movie she wants to provide feedback on. This ensures that his input is directed to the right content.
+
+2. Rating the Experience:
+   hassan rates his experience on a scale from 1 to 5, with 5 being the highest. This helps the platform understand the overall satisfaction level.
+
+3. Adding Comments:
+   In the text box provided, hassaan writes detailed comments about his experience—whether it's praise for the seamless streaming, a suggestion for additional features, or constructive criticism for any improvement.
+
+4. Submit and Confirm:
+   Once she is satisfied with her feedback, Sarah hits the "Submit" button. The system prompts his for confirmation to avoid accidental submissions.
+

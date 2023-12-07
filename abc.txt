@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< ours
+>>>>>>> 16db290 (feedback form)
 1-add account(hassan)
 
 2-Feedback form(Noor)
@@ -15,5 +19,5 @@
 4. Submit and Confirm:
    Once she is satisfied with her feedback, Sarah hits the "Submit" button. The system prompts his for confirmation to avoid accidental submissions.
 
+<<<<<<< HEAD
 3-admin can add user(zoella)
-

@@ -10,24 +10,15 @@ public class user_info {
 			DriverManager.getConnection("jdbc:mysql://localhost:3306/music_movie","root","");
 			Statement stmt=con.createStatement();
 			
-			
 			stmt.executeUpdate("INSERT INTO `users` VALUES (NULL,'"+Name+"','"+password+"','"+Email+"')");
-			
-		
-			
 		
 			con.close();
-			//return user_info;
 		}
 		
 		catch(Exception e)
 		{
 		System.out.println(e);
 		}
-	
 	}
-	
-	
-	
 }
 

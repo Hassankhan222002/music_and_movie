@@ -16,4 +16,4 @@
 4. Submit and Confirm:
    Once she is satisfied with her feedback, Sarah hits the "Submit" button. The system prompts his for confirmation to avoid accidental submissions.
 
-3-admin can add a user (zoella)
+3-admin can add user(zoella)

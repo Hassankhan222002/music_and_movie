@@ -18,7 +18,7 @@
 
     <div class="main-block">
       <h1>LOGIN</h1>
-      <form action="log.jsp">
+      <form action="log_req.jsp">
         <hr>
         <label id="icon"><i class="fas fa-user"></i></label>
         <input type="text" name="Name" id="name" placeholder="Name" required/>
@@ -31,13 +31,7 @@
         </div>
       </form>
     </div>
-<%
-//Login_userRequest payload = new Login_userRequest();
-String Name = request.getParameter("Name");
-String password = request.getParameter("Password");
-Login_user Login_service=new Login_userProxy().getLogin_user();
-Login_service.login_info(Name, password);
-%>  
+
 
 </body>
 </html>

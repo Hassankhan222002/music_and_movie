@@ -17,7 +17,7 @@
 
     <div class="main-block">
       <h1>Registration</h1>
-      <form action="log.jsp">
+      <form action="reg_request.jsp">
         <hr>
         <label id="icon"><i class="fas fa-envelope"></i></label>
         <input type="text" name="Email" id="name" placeholder="Email" required/>
@@ -28,19 +28,11 @@
         
         <hr>
         <div class="btn-block">
-          <button type="submit" href="log.jsp">Submit</button>
+          <button>submit</button>
         </div>
       </form>
     </div>
-  <%
 
-String Name = request.getParameter("Name");
-String password = request.getParameter("Password");
-String Email = request.getParameter("Email");
-
-User_info User_service=new User_infoProxy().getUser_info();
-User_service.getuserinfo(Name, password, Email);
-%>
 
 </body>
 </html>

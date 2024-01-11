@@ -22,10 +22,6 @@
         <hr>
         <hr>
         
-        <div class="btn-block">
-          <button type="submit" href="/">Already user</button>
-        </div>
-        <br>
         
         <div class="btn-block">
           <button type="submit" href="/">Submit</button>

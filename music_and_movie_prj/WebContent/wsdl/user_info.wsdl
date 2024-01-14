@@ -14,7 +14,11 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
     </complexType>
    </element>
    <element name="getuserinfoResponse">
-    <complexType/>
+    <complexType>
+     <sequence>
+      <element name="getuserinfoReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
    </element>
   </schema>
  </wsdl:types>
@@ -35,7 +39,7 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
    </wsdl:message>
 
-   <wsdl:portType name="user_info">
+   <wsdl:portType name="User_info">
 
       <wsdl:operation name="getuserinfo">
 
@@ -51,7 +55,7 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
    </wsdl:portType>
 
-   <wsdl:binding name="user_infoSoapBinding" type="impl:user_info">
+   <wsdl:binding name="User_infoSoapBinding" type="impl:User_info">
 
       <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
 
@@ -75,11 +79,11 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
    </wsdl:binding>
 
-   <wsdl:service name="user_infoService">
+   <wsdl:service name="User_infoService">
 
-      <wsdl:port binding="impl:user_infoSoapBinding" name="user_info">
+      <wsdl:port binding="impl:User_infoSoapBinding" name="User_info">
 
-         <wsdlsoap:address location="http://localhost:8080/music_and_movie_prj/services/user_info"/>
+         <wsdlsoap:address location="http://localhost:8080/music_and_movie_prj/services/User_info"/>
 
       </wsdl:port>
 

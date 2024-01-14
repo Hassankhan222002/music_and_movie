@@ -10,20 +10,28 @@
     xmlns="http://xml.apache.org/axis/wsdd/"
     xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
 
-  <!-- Services from searchingService WSDL service -->
+  <!-- Services from SearchingService WSDL service -->
 
-  <service name="searching" provider="java:RPC" style="wrapped" use="literal">
+  <service name="Searching" provider="java:RPC" style="wrapped" use="literal">
       <parameter name="wsdlTargetNamespace" value="http://music_and_movie_prj"/>
-      <parameter name="wsdlServiceElement" value="searchingService"/>
+      <parameter name="wsdlServiceElement" value="SearchingService"/>
       <parameter name="schemaQualified" value="http://music_and_movie_prj"/>
-      <parameter name="wsdlServicePort" value="searching"/>
+      <parameter name="wsdlServicePort" value="Searching"/>
       <parameter name="className" value="music_and_movie_prj.SearchingSoapBindingImpl"/>
-      <parameter name="wsdlPortType" value="searching"/>
+      <parameter name="wsdlPortType" value="Searching"/>
       <parameter name="typeMappingVersion" value="1.2"/>
-      <operation name="search_movie" qname="operNS:search_movie" xmlns:operNS="http://music_and_movie_prj" soapAction="" >
+      <operation name="status" qname="operNS:status" xmlns:operNS="http://music_and_movie_prj" returnQName="retNS:statusReturn" xmlns:retNS="http://music_and_movie_prj" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="category" qname="operNS:category" xmlns:operNS="http://music_and_movie_prj" returnQName="retNS:categoryReturn" xmlns:retNS="http://music_and_movie_prj" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="movieName" qname="operNS:movieName" xmlns:operNS="http://music_and_movie_prj" returnQName="retNS:movieNameReturn" xmlns:retNS="http://music_and_movie_prj" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <operation name="search_movie" qname="operNS:search_movie" xmlns:operNS="http://music_and_movie_prj" returnQName="retNS:search_movieReturn" xmlns:retNS="http://music_and_movie_prj" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
         <parameter qname="pns:name" xmlns:pns="http://music_and_movie_prj" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
       </operation>
-      <parameter name="allowedMethods" value="search_movie"/>
+      <operation name="genre" qname="operNS:genre" xmlns:operNS="http://music_and_movie_prj" returnQName="retNS:genreReturn" xmlns:retNS="http://music_and_movie_prj" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <parameter name="allowedMethods" value="genre search_movie category movieName status"/>
 
   </service>
 </deployment>

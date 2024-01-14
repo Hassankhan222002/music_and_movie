@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://music_and_movie_prj" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://music_and_movie_prj" xmlns:intf="http://music_and_movie_prj" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://music_and_movie_prj" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="status">
+    <complexType/>
+   </element>
+   <element name="statusResponse">
+    <complexType>
+     <sequence>
+      <element name="statusReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="category">
+    <complexType/>
+   </element>
+   <element name="categoryResponse">
+    <complexType>
+     <sequence>
+      <element name="categoryReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="movieName">
+    <complexType/>
+   </element>
+   <element name="movieNameResponse">
+    <complexType>
+     <sequence>
+      <element name="movieNameReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="search_movie">
+    <complexType>
+     <sequence>
+      <element name="name" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="search_movieResponse">
+    <complexType>
+     <sequence>
+      <element name="search_movieReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="genre">
+    <complexType/>
+   </element>
+   <element name="genreResponse">
+    <complexType>
+     <sequence>
+      <element name="genreReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="genreResponse">
+
+      <wsdl:part element="impl:genreResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="statusRequest">
+
+      <wsdl:part element="impl:status" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="statusResponse">
+
+      <wsdl:part element="impl:statusResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="categoryRequest">
+
+      <wsdl:part element="impl:category" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="search_movieRequest">
+
+      <wsdl:part element="impl:search_movie" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="categoryResponse">
+
+      <wsdl:part element="impl:categoryResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="movieNameResponse">
+
+      <wsdl:part element="impl:movieNameResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="search_movieResponse">
+
+      <wsdl:part element="impl:search_movieResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="genreRequest">
+
+      <wsdl:part element="impl:genre" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="movieNameRequest">
+
+      <wsdl:part element="impl:movieName" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="Searching">
+
+      <wsdl:operation name="status">
+
+         <wsdl:input message="impl:statusRequest" name="statusRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:statusResponse" name="statusResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="category">
+
+         <wsdl:input message="impl:categoryRequest" name="categoryRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:categoryResponse" name="categoryResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="movieName">
+
+         <wsdl:input message="impl:movieNameRequest" name="movieNameRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:movieNameResponse" name="movieNameResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="search_movie">
+
+         <wsdl:input message="impl:search_movieRequest" name="search_movieRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:search_movieResponse" name="search_movieResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="genre">
+
+         <wsdl:input message="impl:genreRequest" name="genreRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:genreResponse" name="genreResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="SearchingSoapBinding" type="impl:Searching">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="status">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="statusRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="statusResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="category">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="categoryRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="categoryResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="movieName">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="movieNameRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="movieNameResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="search_movie">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="search_movieRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="search_movieResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="genre">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="genreRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="genreResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="SearchingService">
+
+      <wsdl:port binding="impl:SearchingSoapBinding" name="Searching">
+
+         <wsdlsoap:address location="http://localhost:8080/music_and_movie_prj/services/Searching"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

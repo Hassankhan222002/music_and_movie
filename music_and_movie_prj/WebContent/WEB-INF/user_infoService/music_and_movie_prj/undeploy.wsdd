@@ -9,7 +9,7 @@
 <undeployment
     xmlns="http://xml.apache.org/axis/wsdd/">
 
-  <!-- Services from user_infoService WSDL service -->
+  <!-- Services from User_infoService WSDL service -->
 
-  <service name="user_info"/>
+  <service name="User_info"/>
 </undeployment>

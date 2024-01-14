@@ -5,39 +5,69 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-public class login_user {
-
-public static void login_info(String name ,String password) {
-		String username = null,passwordrs = null;
-		try {
+public class Login_user {
+	public static String login_info (String Username, String Password) {
+		String name = null,password = null;
+		try{
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection con =
 			DriverManager.getConnection("jdbc:mysql://localhost:3306/music_movie","root","");
 			Statement stmt=con.createStatement();
-			ResultSet rs=stmt.executeQuery("select * from users where name='"+name+"' and password='"+password+"'" );
+			ResultSet rs=stmt.executeQuery("select * from users where Name ='"+Username+"' and password = '" +Password+"'");
+			if(rs.next()) {
+				
 			
 			
-			while(rs.next())
-			{
-			System.out.println("username " + rs.getString(2) + " password: " + rs.getString(3));
-			passwordrs=rs.getString(3);
-			username=rs.getString(2);
-			};
+		     name= rs.getString(2);
+		     password= rs.getString(3);
+			
+			if(name.equals(Username) && password.equals(Password)) {
+				return("successfully login");
+
+				}
+			}
 			con.close();
+			
+		       
 			} catch(Exception e)
 			{
-			//System.out.println("data is not available");
 			System.out.println(e);
 			}
-		if(username==name && passwordrs==password) {
-			System.out.println("successfully login");
-			
-		}
-		else {
-			System.out.println("login failed");
-		}
-		
-		}
+		return " Login failed";
+	}
 }
+/*package main;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+public class Admin_Login {
+	public static String login_info (String Username, String Password) {
+		String name = null,password = null;
+		try{
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection con =
+			DriverManager.getConnection("jdbc:mysql://localhost:3306/add_new_meter","root","");
+			Statement stmt=con.createStatement();
+			ResultSet rs=stmt.executeQuery("select * from admin where Username ='"+Username+"' and Password = '" +Password+"'");
+			if(rs.next()) {
+		     name= rs.getString(2);
+		     password= rs.getString(3);
+			if(name.equals(Username) && password.equals(Password)) {
+				return("successfully login");
+
+				}
+			}
+			con.close();
+		       
+			} catch(Exception e)
+			{
+			System.out.println(e);
+			}
+		return " Login failed";
+	}
+}
+*/
 

@@ -10,17 +10,17 @@
     xmlns="http://xml.apache.org/axis/wsdd/"
     xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
 
-  <!-- Services from login_userService WSDL service -->
+  <!-- Services from Login_userService WSDL service -->
 
-  <service name="login_user" provider="java:RPC" style="wrapped" use="literal">
+  <service name="Login_user" provider="java:RPC" style="wrapped" use="literal">
       <parameter name="wsdlTargetNamespace" value="http://music_and_movie_prj"/>
-      <parameter name="wsdlServiceElement" value="login_userService"/>
+      <parameter name="wsdlServiceElement" value="Login_userService"/>
       <parameter name="schemaQualified" value="http://music_and_movie_prj"/>
-      <parameter name="wsdlServicePort" value="login_user"/>
+      <parameter name="wsdlServicePort" value="Login_user"/>
       <parameter name="className" value="music_and_movie_prj.Login_userSoapBindingImpl"/>
-      <parameter name="wsdlPortType" value="login_user"/>
+      <parameter name="wsdlPortType" value="Login_user"/>
       <parameter name="typeMappingVersion" value="1.2"/>
-      <operation name="login_info" qname="operNS:login_info" xmlns:operNS="http://music_and_movie_prj" soapAction="" >
+      <operation name="login_info" qname="operNS:login_info" xmlns:operNS="http://music_and_movie_prj" returnQName="retNS:login_infoReturn" xmlns:retNS="http://music_and_movie_prj" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
         <parameter qname="pns:name" xmlns:pns="http://music_and_movie_prj" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
         <parameter qname="pns:password" xmlns:pns="http://music_and_movie_prj" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
       </operation>

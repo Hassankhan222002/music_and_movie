@@ -1,4 +1,17 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< ours
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< ours
+>>>>>>> 16db290 (feedback form)
+>>>>>>> hassa_branch
+=======
+=======
+<<<<<<< ours
+>>>>>>> 16db290 (feedback form)
+>>>>>>> hassa_branch
 1-add account(hassan)
 
 2-Feedback form(Noor)
@@ -17,7 +30,17 @@
    Once she is satisfied with her feedback, Sarah hits the "Submit" button. The system prompts his for confirmation to avoid accidental submissions.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> hassa_branch
+3-admin can add user(zoella)
+>>>>>>> hassa_branch
+=======
 3-admin can add a user (zoella)
 =======
 3-admin can add user(zoella)
 >>>>>>> zoella_branch
+>>>>>>> main

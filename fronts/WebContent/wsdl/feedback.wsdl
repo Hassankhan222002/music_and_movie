@@ -4,50 +4,46 @@
 Built on Apr 22, 2006 (06:55:48 PDT)-->
  <wsdl:types>
   <schema elementFormDefault="qualified" targetNamespace="http://music_and_movie_prj" xmlns="http://www.w3.org/2001/XMLSchema">
-   <element name="getuserinfo">
+   <element name="getFeedback">
     <complexType>
      <sequence>
-      <element name="Name" type="xsd:string"/>
-      <element name="password" type="xsd:string"/>
       <element name="Email" type="xsd:string"/>
+      <element name="category" type="xsd:string"/>
+      <element name="comment" type="xsd:string"/>
      </sequence>
     </complexType>
    </element>
-   <element name="getuserinfoResponse">
-    <complexType>
-     <sequence>
-      <element name="getuserinfoReturn" type="xsd:string"/>
-     </sequence>
-    </complexType>
+   <element name="getFeedbackResponse">
+    <complexType/>
    </element>
   </schema>
  </wsdl:types>
 
-   <wsdl:message name="getuserinfoResponse">
+   <wsdl:message name="getFeedbackResponse">
 
-      <wsdl:part element="impl:getuserinfoResponse" name="parameters">
-
-      </wsdl:part>
-
-   </wsdl:message>
-
-   <wsdl:message name="getuserinfoRequest">
-
-      <wsdl:part element="impl:getuserinfo" name="parameters">
+      <wsdl:part element="impl:getFeedbackResponse" name="parameters">
 
       </wsdl:part>
 
    </wsdl:message>
 
-   <wsdl:portType name="User_info">
+   <wsdl:message name="getFeedbackRequest">
 
-      <wsdl:operation name="getuserinfo">
+      <wsdl:part element="impl:getFeedback" name="parameters">
 
-         <wsdl:input message="impl:getuserinfoRequest" name="getuserinfoRequest">
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="feedback">
+
+      <wsdl:operation name="getFeedback">
+
+         <wsdl:input message="impl:getFeedbackRequest" name="getFeedbackRequest">
 
        </wsdl:input>
 
-         <wsdl:output message="impl:getuserinfoResponse" name="getuserinfoResponse">
+         <wsdl:output message="impl:getFeedbackResponse" name="getFeedbackResponse">
 
        </wsdl:output>
 
@@ -55,21 +51,21 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
    </wsdl:portType>
 
-   <wsdl:binding name="User_infoSoapBinding" type="impl:User_info">
+   <wsdl:binding name="feedbackSoapBinding" type="impl:feedback">
 
       <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
 
-      <wsdl:operation name="getuserinfo">
+      <wsdl:operation name="getFeedback">
 
          <wsdlsoap:operation soapAction=""/>
 
-         <wsdl:input name="getuserinfoRequest">
+         <wsdl:input name="getFeedbackRequest">
 
             <wsdlsoap:body use="literal"/>
 
          </wsdl:input>
 
-         <wsdl:output name="getuserinfoResponse">
+         <wsdl:output name="getFeedbackResponse">
 
             <wsdlsoap:body use="literal"/>
 
@@ -79,11 +75,11 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
    </wsdl:binding>
 
-   <wsdl:service name="User_infoService">
+   <wsdl:service name="feedbackService">
 
-      <wsdl:port binding="impl:User_infoSoapBinding" name="User_info">
+      <wsdl:port binding="impl:feedbackSoapBinding" name="feedback">
 
-         <wsdlsoap:address location="http://localhost:8080/music_and_movie_prj/services/User_info"/>
+         <wsdlsoap:address location="http://localhost:8080/music_and_movie_prj/services/feedback"/>
 
       </wsdl:port>
 

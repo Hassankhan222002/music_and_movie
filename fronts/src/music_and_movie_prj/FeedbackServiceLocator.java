@@ -1,5 +1,5 @@
 /**
- * User_infoServiceLocator.java
+ * FeedbackServiceLocator.java
  *
  * This file was auto-generated from WSDL
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
@@ -7,53 +7,53 @@
 
 package music_and_movie_prj;
 
-public class User_infoServiceLocator extends org.apache.axis.client.Service implements music_and_movie_prj.User_infoService {
+public class FeedbackServiceLocator extends org.apache.axis.client.Service implements music_and_movie_prj.FeedbackService {
 
-    public User_infoServiceLocator() {
+    public FeedbackServiceLocator() {
     }
 
 
-    public User_infoServiceLocator(org.apache.axis.EngineConfiguration config) {
+    public FeedbackServiceLocator(org.apache.axis.EngineConfiguration config) {
         super(config);
     }
 
-    public User_infoServiceLocator(java.lang.String wsdlLoc, javax.xml.namespace.QName sName) throws javax.xml.rpc.ServiceException {
+    public FeedbackServiceLocator(java.lang.String wsdlLoc, javax.xml.namespace.QName sName) throws javax.xml.rpc.ServiceException {
         super(wsdlLoc, sName);
     }
 
-    // Use to get a proxy class for User_info
-    private java.lang.String User_info_address = "http://localhost:8080/music_and_movie_prj/services/User_info";
+    // Use to get a proxy class for feedback
+    private java.lang.String feedback_address = "http://localhost:8080/music_and_movie_prj/services/feedback";
 
-    public java.lang.String getUser_infoAddress() {
-        return User_info_address;
+    public java.lang.String getfeedbackAddress() {
+        return feedback_address;
     }
 
     // The WSDD service name defaults to the port name.
-    private java.lang.String User_infoWSDDServiceName = "User_info";
+    private java.lang.String feedbackWSDDServiceName = "feedback";
 
-    public java.lang.String getUser_infoWSDDServiceName() {
-        return User_infoWSDDServiceName;
+    public java.lang.String getfeedbackWSDDServiceName() {
+        return feedbackWSDDServiceName;
     }
 
-    public void setUser_infoWSDDServiceName(java.lang.String name) {
-        User_infoWSDDServiceName = name;
+    public void setfeedbackWSDDServiceName(java.lang.String name) {
+        feedbackWSDDServiceName = name;
     }
 
-    public music_and_movie_prj.User_info getUser_info() throws javax.xml.rpc.ServiceException {
+    public music_and_movie_prj.Feedback getfeedback() throws javax.xml.rpc.ServiceException {
        java.net.URL endpoint;
         try {
-            endpoint = new java.net.URL(User_info_address);
+            endpoint = new java.net.URL(feedback_address);
         }
         catch (java.net.MalformedURLException e) {
             throw new javax.xml.rpc.ServiceException(e);
         }
-        return getUser_info(endpoint);
+        return getfeedback(endpoint);
     }
 
-    public music_and_movie_prj.User_info getUser_info(java.net.URL portAddress) throws javax.xml.rpc.ServiceException {
+    public music_and_movie_prj.Feedback getfeedback(java.net.URL portAddress) throws javax.xml.rpc.ServiceException {
         try {
-            music_and_movie_prj.User_infoSoapBindingStub _stub = new music_and_movie_prj.User_infoSoapBindingStub(portAddress, this);
-            _stub.setPortName(getUser_infoWSDDServiceName());
+            music_and_movie_prj.FeedbackSoapBindingStub _stub = new music_and_movie_prj.FeedbackSoapBindingStub(portAddress, this);
+            _stub.setPortName(getfeedbackWSDDServiceName());
             return _stub;
         }
         catch (org.apache.axis.AxisFault e) {
@@ -61,8 +61,8 @@ public class User_infoServiceLocator extends org.apache.axis.client.Service impl
         }
     }
 
-    public void setUser_infoEndpointAddress(java.lang.String address) {
-        User_info_address = address;
+    public void setfeedbackEndpointAddress(java.lang.String address) {
+        feedback_address = address;
     }
 
     /**
@@ -72,9 +72,9 @@ public class User_infoServiceLocator extends org.apache.axis.client.Service impl
      */
     public java.rmi.Remote getPort(Class serviceEndpointInterface) throws javax.xml.rpc.ServiceException {
         try {
-            if (music_and_movie_prj.User_info.class.isAssignableFrom(serviceEndpointInterface)) {
-                music_and_movie_prj.User_infoSoapBindingStub _stub = new music_and_movie_prj.User_infoSoapBindingStub(new java.net.URL(User_info_address), this);
-                _stub.setPortName(getUser_infoWSDDServiceName());
+            if (music_and_movie_prj.Feedback.class.isAssignableFrom(serviceEndpointInterface)) {
+                music_and_movie_prj.FeedbackSoapBindingStub _stub = new music_and_movie_prj.FeedbackSoapBindingStub(new java.net.URL(feedback_address), this);
+                _stub.setPortName(getfeedbackWSDDServiceName());
                 return _stub;
             }
         }
@@ -94,8 +94,8 @@ public class User_infoServiceLocator extends org.apache.axis.client.Service impl
             return getPort(serviceEndpointInterface);
         }
         java.lang.String inputPortName = portName.getLocalPart();
-        if ("User_info".equals(inputPortName)) {
-            return getUser_info();
+        if ("feedback".equals(inputPortName)) {
+            return getfeedback();
         }
         else  {
             java.rmi.Remote _stub = getPort(serviceEndpointInterface);
@@ -105,7 +105,7 @@ public class User_infoServiceLocator extends org.apache.axis.client.Service impl
     }
 
     public javax.xml.namespace.QName getServiceName() {
-        return new javax.xml.namespace.QName("http://music_and_movie_prj", "User_infoService");
+        return new javax.xml.namespace.QName("http://music_and_movie_prj", "feedbackService");
     }
 
     private java.util.HashSet ports = null;
@@ -113,7 +113,7 @@ public class User_infoServiceLocator extends org.apache.axis.client.Service impl
     public java.util.Iterator getPorts() {
         if (ports == null) {
             ports = new java.util.HashSet();
-            ports.add(new javax.xml.namespace.QName("http://music_and_movie_prj", "User_info"));
+            ports.add(new javax.xml.namespace.QName("http://music_and_movie_prj", "feedback"));
         }
         return ports.iterator();
     }
@@ -123,8 +123,8 @@ public class User_infoServiceLocator extends org.apache.axis.client.Service impl
     */
     public void setEndpointAddress(java.lang.String portName, java.lang.String address) throws javax.xml.rpc.ServiceException {
         
-if ("User_info".equals(portName)) {
-            setUser_infoEndpointAddress(address);
+if ("feedback".equals(portName)) {
+            setfeedbackEndpointAddress(address);
         }
         else 
 { // Unknown Port Name

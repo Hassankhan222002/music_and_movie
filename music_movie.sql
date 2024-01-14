@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 21, 2023 at 11:54 PM
+-- Generation Time: Dec 25, 2023 at 07:47 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -20,8 +20,27 @@ SET time_zone = "+00:00";
 --
 -- Database: `music_movie`
 --
-CREATE DATABASE IF NOT EXISTS `music_movie` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `music_movie`;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `feedback`
+--
+
+CREATE TABLE `feedback` (
+  `feedback_id` int(11) NOT NULL,
+  `Email` varchar(45) NOT NULL,
+  `category` varchar(25) NOT NULL,
+  `comment` varchar(225) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `feedback`
+--
+
+INSERT INTO `feedback` (`feedback_id`, `Email`, `category`, `comment`) VALUES
+(1, 'n.sheikh0101@gmail.com', 'movies', 'very noice movie'),
+(2, 'n.sheikh0101@gmail.comjj', 'movie', 'this is awesomeee');
 
 -- --------------------------------------------------------
 
@@ -75,10 +94,26 @@ CREATE TABLE `users` (
 --
 
 --
+-- Indexes for table `feedback`
+--
+ALTER TABLE `feedback`
+  ADD PRIMARY KEY (`feedback_id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`ID`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `feedback`
+--
+ALTER TABLE `feedback`
+  MODIFY `feedback_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -2,11 +2,11 @@ package music_and_movie_prj;
 import java.sql.*;
 
 
-public class adding_users {
+public class Adding_users {
 
 	public static void creating_user() {
 		
-	
+	//admin
 try{
 	Class.forName("com.mysql.jdbc.Driver");
 	Connection con =
@@ -25,6 +25,12 @@ try{
 	System.out.println(e);
 	}
 	}
+	//user
+	
+		
+	
+	
+	
 	
 	
 	public static void main() {

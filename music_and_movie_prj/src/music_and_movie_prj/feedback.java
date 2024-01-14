@@ -1,9 +1,9 @@
 package music_and_movie_prj;
+
 import java.sql.*;
 
-public class User_info {
-	
-	public static String getuserinfo(String Name,String password,String Email) {
+public class feedback {
+	public void getFeedback(String Email,String category,String comment) {
 		try{
 			Class.forName("com.mysql.jdbc.Driver");
 			Connection con =
@@ -11,7 +11,7 @@ public class User_info {
 			Statement stmt=con.createStatement();
 			
 			
-			stmt.executeUpdate("INSERT INTO `users` VALUES (NULL,'"+Name+"','"+password+"','"+Email+"')");
+			stmt.executeUpdate("INSERT INTO `feedback` VALUES (NULL,'"+Email+"','"+category+"','"+comment+"')");
 			
 		
 			
@@ -24,10 +24,6 @@ public class User_info {
 		{
 		System.out.println(e);
 		}
-		return " ";
+	
 	}
-	
-	
-	
 }
-

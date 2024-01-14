@@ -1,0 +1,20 @@
+eclipse.preferences.version=1
+<<<<<<< HEAD
+encoding//src/music_and_movie_prj/Feedback.java=UTF-8
+encoding//src/music_and_movie_prj/FeedbackService.java=UTF-8
+encoding//src/music_and_movie_prj/FeedbackServiceLocator.java=UTF-8
+encoding//src/music_and_movie_prj/FeedbackSoapBindingStub.java=UTF-8
+=======
+encoding//src/music_and_movie_prj/Login_user.java=UTF-8
+encoding//src/music_and_movie_prj/Login_userService.java=UTF-8
+encoding//src/music_and_movie_prj/Login_userServiceLocator.java=UTF-8
+encoding//src/music_and_movie_prj/Login_userSoapBindingStub.java=UTF-8
+encoding//src/music_and_movie_prj/Searching.java=UTF-8
+encoding//src/music_and_movie_prj/SearchingService.java=UTF-8
+encoding//src/music_and_movie_prj/SearchingServiceLocator.java=UTF-8
+encoding//src/music_and_movie_prj/SearchingSoapBindingStub.java=UTF-8
+encoding//src/music_and_movie_prj/User_info.java=UTF-8
+encoding//src/music_and_movie_prj/User_infoService.java=UTF-8
+encoding//src/music_and_movie_prj/User_infoServiceLocator.java=UTF-8
+encoding//src/music_and_movie_prj/User_infoSoapBindingStub.java=UTF-8
+>>>>>>> origin/main

@@ -7,8 +7,8 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
    <element name="login_info">
     <complexType>
      <sequence>
-      <element name="name" type="xsd:string"/>
-      <element name="password" type="xsd:string"/>
+      <element name="Username" type="xsd:string"/>
+      <element name="Password" type="xsd:string"/>
      </sequence>
     </complexType>
    </element>

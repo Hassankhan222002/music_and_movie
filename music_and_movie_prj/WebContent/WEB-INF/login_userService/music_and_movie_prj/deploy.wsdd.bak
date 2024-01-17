@@ -21,8 +21,8 @@
       <parameter name="wsdlPortType" value="Login_user"/>
       <parameter name="typeMappingVersion" value="1.2"/>
       <operation name="login_info" qname="operNS:login_info" xmlns:operNS="http://music_and_movie_prj" returnQName="retNS:login_infoReturn" xmlns:retNS="http://music_and_movie_prj" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
-        <parameter qname="pns:name" xmlns:pns="http://music_and_movie_prj" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
-        <parameter qname="pns:password" xmlns:pns="http://music_and_movie_prj" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:Username" xmlns:pns="http://music_and_movie_prj" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:Password" xmlns:pns="http://music_and_movie_prj" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
       </operation>
       <parameter name="allowedMethods" value="login_info"/>
 

@@ -9,7 +9,7 @@
 <undeployment
     xmlns="http://xml.apache.org/axis/wsdd/">
 
-  <!-- Services from feedbackService WSDL service -->
+  <!-- Services from FeedbackService WSDL service -->
 
-  <service name="feedback"/>
+  <service name="Feedback"/>
 </undeployment>

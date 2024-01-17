@@ -8,9 +8,9 @@
 package music_and_movie_prj;
 
 public interface FeedbackService extends javax.xml.rpc.Service {
-    public java.lang.String getfeedbackAddress();
+    public java.lang.String getFeedbackAddress();
 
-    public music_and_movie_prj.Feedback getfeedback() throws javax.xml.rpc.ServiceException;
+    public music_and_movie_prj.Feedback getFeedback() throws javax.xml.rpc.ServiceException;
 
-    public music_and_movie_prj.Feedback getfeedback(java.net.URL portAddress) throws javax.xml.rpc.ServiceException;
+    public music_and_movie_prj.Feedback getFeedback(java.net.URL portAddress) throws javax.xml.rpc.ServiceException;
 }

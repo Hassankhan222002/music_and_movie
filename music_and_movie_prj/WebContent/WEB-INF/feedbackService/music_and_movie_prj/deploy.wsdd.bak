@@ -10,15 +10,15 @@
     xmlns="http://xml.apache.org/axis/wsdd/"
     xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
 
-  <!-- Services from feedbackService WSDL service -->
+  <!-- Services from FeedbackService WSDL service -->
 
-  <service name="feedback" provider="java:RPC" style="wrapped" use="literal">
+  <service name="Feedback" provider="java:RPC" style="wrapped" use="literal">
       <parameter name="wsdlTargetNamespace" value="http://music_and_movie_prj"/>
-      <parameter name="wsdlServiceElement" value="feedbackService"/>
+      <parameter name="wsdlServiceElement" value="FeedbackService"/>
       <parameter name="schemaQualified" value="http://music_and_movie_prj"/>
-      <parameter name="wsdlServicePort" value="feedback"/>
+      <parameter name="wsdlServicePort" value="Feedback"/>
       <parameter name="className" value="music_and_movie_prj.FeedbackSoapBindingImpl"/>
-      <parameter name="wsdlPortType" value="feedback"/>
+      <parameter name="wsdlPortType" value="Feedback"/>
       <parameter name="typeMappingVersion" value="1.2"/>
       <operation name="getFeedback" qname="operNS:getFeedback" xmlns:operNS="http://music_and_movie_prj" soapAction="" >
         <parameter qname="pns:Email" xmlns:pns="http://music_and_movie_prj" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>

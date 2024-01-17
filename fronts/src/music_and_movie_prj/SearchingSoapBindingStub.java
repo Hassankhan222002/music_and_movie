@@ -33,10 +33,10 @@ public class SearchingSoapBindingStub extends org.apache.axis.client.Stub implem
         _operations[0] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
-        oper.setName("category");
+        oper.setName("movieName");
         oper.setReturnType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         oper.setReturnClass(java.lang.String.class);
-        oper.setReturnQName(new javax.xml.namespace.QName("http://music_and_movie_prj", "categoryReturn"));
+        oper.setReturnQName(new javax.xml.namespace.QName("http://music_and_movie_prj", "movieNameReturn"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
         _operations[1] = oper;
@@ -62,10 +62,10 @@ public class SearchingSoapBindingStub extends org.apache.axis.client.Stub implem
         _operations[3] = oper;
 
         oper = new org.apache.axis.description.OperationDesc();
-        oper.setName("movieName");
+        oper.setName("category");
         oper.setReturnType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         oper.setReturnClass(java.lang.String.class);
-        oper.setReturnQName(new javax.xml.namespace.QName("http://music_and_movie_prj", "movieNameReturn"));
+        oper.setReturnQName(new javax.xml.namespace.QName("http://music_and_movie_prj", "categoryReturn"));
         oper.setStyle(org.apache.axis.constants.Style.WRAPPED);
         oper.setUse(org.apache.axis.constants.Use.LITERAL);
         _operations[4] = oper;
@@ -157,7 +157,7 @@ public class SearchingSoapBindingStub extends org.apache.axis.client.Stub implem
 }
     }
 
-    public java.lang.String category() throws java.rmi.RemoteException {
+    public java.lang.String movieName() throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -169,7 +169,7 @@ public class SearchingSoapBindingStub extends org.apache.axis.client.Stub implem
         _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
         _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("http://music_and_movie_prj", "category"));
+        _call.setOperationName(new javax.xml.namespace.QName("http://music_and_movie_prj", "movieName"));
 
         setRequestHeaders(_call);
         setAttachments(_call);
@@ -259,7 +259,7 @@ public class SearchingSoapBindingStub extends org.apache.axis.client.Stub implem
 }
     }
 
-    public java.lang.String movieName() throws java.rmi.RemoteException {
+    public java.lang.String category() throws java.rmi.RemoteException {
         if (super.cachedEndpoint == null) {
             throw new org.apache.axis.NoEndPointException();
         }
@@ -271,7 +271,7 @@ public class SearchingSoapBindingStub extends org.apache.axis.client.Stub implem
         _call.setProperty(org.apache.axis.client.Call.SEND_TYPE_ATTR, Boolean.FALSE);
         _call.setProperty(org.apache.axis.AxisEngine.PROP_DOMULTIREFS, Boolean.FALSE);
         _call.setSOAPVersion(org.apache.axis.soap.SOAPConstants.SOAP11_CONSTANTS);
-        _call.setOperationName(new javax.xml.namespace.QName("http://music_and_movie_prj", "movieName"));
+        _call.setOperationName(new javax.xml.namespace.QName("http://music_and_movie_prj", "category"));
 
         setRequestHeaders(_call);
         setAttachments(_call);

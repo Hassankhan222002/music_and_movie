@@ -61,12 +61,12 @@
  </ns1:service>
  <ns1:service name="Searching" provider="java:RPC" style="wrapped" use="literal">
   <ns1:operation name="status" qname="ns4:status" returnQName="ns4:statusReturn" returnType="xsd:string" soapAction="" xmlns:ns4="http://music_and_movie_prj" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
-  <ns1:operation name="category" qname="ns5:category" returnQName="ns5:categoryReturn" returnType="xsd:string" soapAction="" xmlns:ns5="http://music_and_movie_prj" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:operation name="movieName" qname="ns5:movieName" returnQName="ns5:movieNameReturn" returnType="xsd:string" soapAction="" xmlns:ns5="http://music_and_movie_prj" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
   <ns1:operation name="genre" qname="ns6:genre" returnQName="ns6:genreReturn" returnType="xsd:string" soapAction="" xmlns:ns6="http://music_and_movie_prj" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
   <ns1:operation name="search_movie" qname="ns7:search_movie" returnQName="ns7:search_movieReturn" returnType="xsd:string" soapAction="" xmlns:ns7="http://music_and_movie_prj" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
    <ns1:parameter qname="ns7:name" type="xsd:string"/>
   </ns1:operation>
-  <ns1:operation name="movieName" qname="ns8:movieName" returnQName="ns8:movieNameReturn" returnType="xsd:string" soapAction="" xmlns:ns8="http://music_and_movie_prj" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:operation name="category" qname="ns8:category" returnQName="ns8:categoryReturn" returnType="xsd:string" soapAction="" xmlns:ns8="http://music_and_movie_prj" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
   <ns1:parameter name="allowedMethods" value="genre search_movie category movieName status"/>
   <ns1:parameter name="wsdlPortType" value="Searching"/>
   <ns1:parameter name="typeMappingVersion" value="1.2"/>
@@ -76,10 +76,25 @@
   <ns1:parameter name="wsdlTargetNamespace" value="http://music_and_movie_prj"/>
   <ns1:parameter name="wsdlServiceElement" value="SearchingService"/>
  </ns1:service>
+ <ns1:service name="Feedback" provider="java:RPC" style="wrapped" use="literal">
+  <ns1:operation name="getFeedback" qname="ns9:getFeedback" soapAction="" xmlns:ns9="http://music_and_movie_prj">
+   <ns1:parameter qname="ns9:Email" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+   <ns1:parameter qname="ns9:category" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+   <ns1:parameter qname="ns9:comment" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  </ns1:operation>
+  <ns1:parameter name="allowedMethods" value="getFeedback"/>
+  <ns1:parameter name="wsdlPortType" value="Feedback"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
+  <ns1:parameter name="schemaQualified" value="http://music_and_movie_prj"/>
+  <ns1:parameter name="wsdlServicePort" value="Feedback"/>
+  <ns1:parameter name="className" value="music_and_movie_prj.Feedback"/>
+  <ns1:parameter name="wsdlTargetNamespace" value="http://music_and_movie_prj"/>
+  <ns1:parameter name="wsdlServiceElement" value="FeedbackService"/>
+ </ns1:service>
  <ns1:service name="Login_user" provider="java:RPC" style="wrapped" use="literal">
-  <ns1:operation name="login_info" qname="ns9:login_info" returnQName="ns9:login_infoReturn" returnType="xsd:string" soapAction="" xmlns:ns9="http://music_and_movie_prj" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-   <ns1:parameter qname="ns9:Username" type="xsd:string"/>
-   <ns1:parameter qname="ns9:Password" type="xsd:string"/>
+  <ns1:operation name="login_info" qname="ns10:login_info" returnQName="ns10:login_infoReturn" returnType="xsd:string" soapAction="" xmlns:ns10="http://music_and_movie_prj" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns10:Username" type="xsd:string"/>
+   <ns1:parameter qname="ns10:Password" type="xsd:string"/>
   </ns1:operation>
   <ns1:parameter name="allowedMethods" value="login_info"/>
   <ns1:parameter name="typeMappingVersion" value="1.2"/>
@@ -91,10 +106,10 @@
   <ns1:parameter name="wsdlServiceElement" value="Login_userService"/>
  </ns1:service>
  <ns1:service name="User_info" provider="java:RPC" style="wrapped" use="literal">
-  <ns1:operation name="getuserinfo" qname="ns10:getuserinfo" returnQName="ns10:getuserinfoReturn" returnType="xsd:string" soapAction="" xmlns:ns10="http://music_and_movie_prj" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-   <ns1:parameter qname="ns10:Name" type="xsd:string"/>
-   <ns1:parameter qname="ns10:password" type="xsd:string"/>
-   <ns1:parameter qname="ns10:Email" type="xsd:string"/>
+  <ns1:operation name="getuserinfo" qname="ns11:getuserinfo" returnQName="ns11:getuserinfoReturn" returnType="xsd:string" soapAction="" xmlns:ns11="http://music_and_movie_prj" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns11:Name" type="xsd:string"/>
+   <ns1:parameter qname="ns11:password" type="xsd:string"/>
+   <ns1:parameter qname="ns11:Email" type="xsd:string"/>
   </ns1:operation>
   <ns1:parameter name="allowedMethods" value="getuserinfo"/>
   <ns1:parameter name="typeMappingVersion" value="1.2"/>

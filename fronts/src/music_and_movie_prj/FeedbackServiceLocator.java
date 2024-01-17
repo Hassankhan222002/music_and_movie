@@ -21,39 +21,39 @@ public class FeedbackServiceLocator extends org.apache.axis.client.Service imple
         super(wsdlLoc, sName);
     }
 
-    // Use to get a proxy class for feedback
-    private java.lang.String feedback_address = "http://localhost:8080/music_and_movie_prj/services/feedback";
+    // Use to get a proxy class for Feedback
+    private java.lang.String Feedback_address = "http://localhost:8080/music_and_movie_prj/services/Feedback";
 
-    public java.lang.String getfeedbackAddress() {
-        return feedback_address;
+    public java.lang.String getFeedbackAddress() {
+        return Feedback_address;
     }
 
     // The WSDD service name defaults to the port name.
-    private java.lang.String feedbackWSDDServiceName = "feedback";
+    private java.lang.String FeedbackWSDDServiceName = "Feedback";
 
-    public java.lang.String getfeedbackWSDDServiceName() {
-        return feedbackWSDDServiceName;
+    public java.lang.String getFeedbackWSDDServiceName() {
+        return FeedbackWSDDServiceName;
     }
 
-    public void setfeedbackWSDDServiceName(java.lang.String name) {
-        feedbackWSDDServiceName = name;
+    public void setFeedbackWSDDServiceName(java.lang.String name) {
+        FeedbackWSDDServiceName = name;
     }
 
-    public music_and_movie_prj.Feedback getfeedback() throws javax.xml.rpc.ServiceException {
+    public music_and_movie_prj.Feedback getFeedback() throws javax.xml.rpc.ServiceException {
        java.net.URL endpoint;
         try {
-            endpoint = new java.net.URL(feedback_address);
+            endpoint = new java.net.URL(Feedback_address);
         }
         catch (java.net.MalformedURLException e) {
             throw new javax.xml.rpc.ServiceException(e);
         }
-        return getfeedback(endpoint);
+        return getFeedback(endpoint);
     }
 
-    public music_and_movie_prj.Feedback getfeedback(java.net.URL portAddress) throws javax.xml.rpc.ServiceException {
+    public music_and_movie_prj.Feedback getFeedback(java.net.URL portAddress) throws javax.xml.rpc.ServiceException {
         try {
             music_and_movie_prj.FeedbackSoapBindingStub _stub = new music_and_movie_prj.FeedbackSoapBindingStub(portAddress, this);
-            _stub.setPortName(getfeedbackWSDDServiceName());
+            _stub.setPortName(getFeedbackWSDDServiceName());
             return _stub;
         }
         catch (org.apache.axis.AxisFault e) {
@@ -61,8 +61,8 @@ public class FeedbackServiceLocator extends org.apache.axis.client.Service imple
         }
     }
 
-    public void setfeedbackEndpointAddress(java.lang.String address) {
-        feedback_address = address;
+    public void setFeedbackEndpointAddress(java.lang.String address) {
+        Feedback_address = address;
     }
 
     /**
@@ -73,8 +73,8 @@ public class FeedbackServiceLocator extends org.apache.axis.client.Service imple
     public java.rmi.Remote getPort(Class serviceEndpointInterface) throws javax.xml.rpc.ServiceException {
         try {
             if (music_and_movie_prj.Feedback.class.isAssignableFrom(serviceEndpointInterface)) {
-                music_and_movie_prj.FeedbackSoapBindingStub _stub = new music_and_movie_prj.FeedbackSoapBindingStub(new java.net.URL(feedback_address), this);
-                _stub.setPortName(getfeedbackWSDDServiceName());
+                music_and_movie_prj.FeedbackSoapBindingStub _stub = new music_and_movie_prj.FeedbackSoapBindingStub(new java.net.URL(Feedback_address), this);
+                _stub.setPortName(getFeedbackWSDDServiceName());
                 return _stub;
             }
         }
@@ -94,8 +94,8 @@ public class FeedbackServiceLocator extends org.apache.axis.client.Service imple
             return getPort(serviceEndpointInterface);
         }
         java.lang.String inputPortName = portName.getLocalPart();
-        if ("feedback".equals(inputPortName)) {
-            return getfeedback();
+        if ("Feedback".equals(inputPortName)) {
+            return getFeedback();
         }
         else  {
             java.rmi.Remote _stub = getPort(serviceEndpointInterface);
@@ -105,7 +105,7 @@ public class FeedbackServiceLocator extends org.apache.axis.client.Service imple
     }
 
     public javax.xml.namespace.QName getServiceName() {
-        return new javax.xml.namespace.QName("http://music_and_movie_prj", "feedbackService");
+        return new javax.xml.namespace.QName("http://music_and_movie_prj", "FeedbackService");
     }
 
     private java.util.HashSet ports = null;
@@ -113,7 +113,7 @@ public class FeedbackServiceLocator extends org.apache.axis.client.Service imple
     public java.util.Iterator getPorts() {
         if (ports == null) {
             ports = new java.util.HashSet();
-            ports.add(new javax.xml.namespace.QName("http://music_and_movie_prj", "feedback"));
+            ports.add(new javax.xml.namespace.QName("http://music_and_movie_prj", "Feedback"));
         }
         return ports.iterator();
     }
@@ -123,8 +123,8 @@ public class FeedbackServiceLocator extends org.apache.axis.client.Service imple
     */
     public void setEndpointAddress(java.lang.String portName, java.lang.String address) throws javax.xml.rpc.ServiceException {
         
-if ("feedback".equals(portName)) {
-            setfeedbackEndpointAddress(address);
+if ("Feedback".equals(portName)) {
+            setFeedbackEndpointAddress(address);
         }
         else 
 { // Unknown Port Name

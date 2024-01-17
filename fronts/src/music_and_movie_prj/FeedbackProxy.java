@@ -15,7 +15,7 @@ public class FeedbackProxy implements music_and_movie_prj.Feedback {
   
   private void _initFeedbackProxy() {
     try {
-      feedback = (new music_and_movie_prj.FeedbackServiceLocator()).getfeedback();
+      feedback = (new music_and_movie_prj.FeedbackServiceLocator()).getFeedback();
       if (feedback != null) {
         if (_endpoint != null)
           ((javax.xml.rpc.Stub)feedback)._setProperty("javax.xml.rpc.service.endpoint.address", _endpoint);

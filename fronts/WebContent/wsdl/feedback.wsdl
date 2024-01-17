@@ -35,7 +35,7 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
    </wsdl:message>
 
-   <wsdl:portType name="feedback">
+   <wsdl:portType name="Feedback">
 
       <wsdl:operation name="getFeedback">
 
@@ -51,7 +51,7 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
    </wsdl:portType>
 
-   <wsdl:binding name="feedbackSoapBinding" type="impl:feedback">
+   <wsdl:binding name="FeedbackSoapBinding" type="impl:Feedback">
 
       <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
 
@@ -75,11 +75,11 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
    </wsdl:binding>
 
-   <wsdl:service name="feedbackService">
+   <wsdl:service name="FeedbackService">
 
-      <wsdl:port binding="impl:feedbackSoapBinding" name="feedback">
+      <wsdl:port binding="impl:FeedbackSoapBinding" name="Feedback">
 
-         <wsdlsoap:address location="http://localhost:8080/music_and_movie_prj/services/feedback"/>
+         <wsdlsoap:address location="http://localhost:8080/music_and_movie_prj/services/Feedback"/>
 
       </wsdl:port>
 

@@ -14,13 +14,13 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
      </sequence>
     </complexType>
    </element>
-   <element name="category">
+   <element name="movieName">
     <complexType/>
    </element>
-   <element name="categoryResponse">
+   <element name="movieNameResponse">
     <complexType>
      <sequence>
-      <element name="categoryReturn" type="xsd:string"/>
+      <element name="movieNameReturn" type="xsd:string"/>
      </sequence>
     </complexType>
    </element>
@@ -48,13 +48,13 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
      </sequence>
     </complexType>
    </element>
-   <element name="movieName">
+   <element name="category">
     <complexType/>
    </element>
-   <element name="movieNameResponse">
+   <element name="categoryResponse">
     <complexType>
      <sequence>
-      <element name="movieNameReturn" type="xsd:string"/>
+      <element name="categoryReturn" type="xsd:string"/>
      </sequence>
     </complexType>
    </element>
@@ -85,14 +85,6 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
    </wsdl:message>
 
-   <wsdl:message name="categoryRequest">
-
-      <wsdl:part element="impl:category" name="parameters">
-
-      </wsdl:part>
-
-   </wsdl:message>
-
    <wsdl:message name="search_movieRequest">
 
       <wsdl:part element="impl:search_movie" name="parameters">
@@ -101,9 +93,9 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
    </wsdl:message>
 
-   <wsdl:message name="categoryResponse">
+   <wsdl:message name="categoryRequest">
 
-      <wsdl:part element="impl:categoryResponse" name="parameters">
+      <wsdl:part element="impl:category" name="parameters">
 
       </wsdl:part>
 
@@ -112,6 +104,14 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
    <wsdl:message name="movieNameResponse">
 
       <wsdl:part element="impl:movieNameResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="categoryResponse">
+
+      <wsdl:part element="impl:categoryResponse" name="parameters">
 
       </wsdl:part>
 
@@ -155,13 +155,13 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
       </wsdl:operation>
 
-      <wsdl:operation name="category">
+      <wsdl:operation name="movieName">
 
-         <wsdl:input message="impl:categoryRequest" name="categoryRequest">
+         <wsdl:input message="impl:movieNameRequest" name="movieNameRequest">
 
        </wsdl:input>
 
-         <wsdl:output message="impl:categoryResponse" name="categoryResponse">
+         <wsdl:output message="impl:movieNameResponse" name="movieNameResponse">
 
        </wsdl:output>
 
@@ -191,13 +191,13 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
       </wsdl:operation>
 
-      <wsdl:operation name="movieName">
+      <wsdl:operation name="category">
 
-         <wsdl:input message="impl:movieNameRequest" name="movieNameRequest">
+         <wsdl:input message="impl:categoryRequest" name="categoryRequest">
 
        </wsdl:input>
 
-         <wsdl:output message="impl:movieNameResponse" name="movieNameResponse">
+         <wsdl:output message="impl:categoryResponse" name="categoryResponse">
 
        </wsdl:output>
 
@@ -227,17 +227,17 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
       </wsdl:operation>
 
-      <wsdl:operation name="category">
+      <wsdl:operation name="movieName">
 
          <wsdlsoap:operation soapAction=""/>
 
-         <wsdl:input name="categoryRequest">
+         <wsdl:input name="movieNameRequest">
 
             <wsdlsoap:body use="literal"/>
 
          </wsdl:input>
 
-         <wsdl:output name="categoryResponse">
+         <wsdl:output name="movieNameResponse">
 
             <wsdlsoap:body use="literal"/>
 
@@ -281,17 +281,17 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
       </wsdl:operation>
 
-      <wsdl:operation name="movieName">
+      <wsdl:operation name="category">
 
          <wsdlsoap:operation soapAction=""/>
 
-         <wsdl:input name="movieNameRequest">
+         <wsdl:input name="categoryRequest">
 
             <wsdlsoap:body use="literal"/>
 
          </wsdl:input>
 
-         <wsdl:output name="movieNameResponse">
+         <wsdl:output name="categoryResponse">
 
             <wsdlsoap:body use="literal"/>
 

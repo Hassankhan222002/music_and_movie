@@ -2,7 +2,7 @@ package music_and_movie_prj;
 
 import java.sql.*;
 
-public class feedback {
+public class Feedback {
 	public void getFeedback(String Email,String category,String comment) {
 		try{
 			Class.forName("com.mysql.jdbc.Driver");

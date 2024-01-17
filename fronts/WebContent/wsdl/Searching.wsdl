@@ -24,6 +24,16 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
      </sequence>
     </complexType>
    </element>
+   <element name="genre">
+    <complexType/>
+   </element>
+   <element name="genreResponse">
+    <complexType>
+     <sequence>
+      <element name="genreReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
    <element name="search_movie">
     <complexType>
      <sequence>
@@ -45,16 +55,6 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
     <complexType>
      <sequence>
       <element name="movieNameReturn" type="xsd:string"/>
-     </sequence>
-    </complexType>
-   </element>
-   <element name="genre">
-    <complexType/>
-   </element>
-   <element name="genreResponse">
-    <complexType>
-     <sequence>
-      <element name="genreReturn" type="xsd:string"/>
      </sequence>
     </complexType>
    </element>
@@ -117,17 +117,17 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
    </wsdl:message>
 
-   <wsdl:message name="search_movieResponse">
+   <wsdl:message name="genreRequest">
 
-      <wsdl:part element="impl:search_movieResponse" name="parameters">
+      <wsdl:part element="impl:genre" name="parameters">
 
       </wsdl:part>
 
    </wsdl:message>
 
-   <wsdl:message name="genreRequest">
+   <wsdl:message name="search_movieResponse">
 
-      <wsdl:part element="impl:genre" name="parameters">
+      <wsdl:part element="impl:search_movieResponse" name="parameters">
 
       </wsdl:part>
 
@@ -167,6 +167,18 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
       </wsdl:operation>
 
+      <wsdl:operation name="genre">
+
+         <wsdl:input message="impl:genreRequest" name="genreRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:genreResponse" name="genreResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
       <wsdl:operation name="search_movie">
 
          <wsdl:input message="impl:search_movieRequest" name="search_movieRequest">
@@ -186,18 +198,6 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
        </wsdl:input>
 
          <wsdl:output message="impl:movieNameResponse" name="movieNameResponse">
-
-       </wsdl:output>
-
-      </wsdl:operation>
-
-      <wsdl:operation name="genre">
-
-         <wsdl:input message="impl:genreRequest" name="genreRequest">
-
-       </wsdl:input>
-
-         <wsdl:output message="impl:genreResponse" name="genreResponse">
 
        </wsdl:output>
 
@@ -245,6 +245,24 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
       </wsdl:operation>
 
+      <wsdl:operation name="genre">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="genreRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="genreResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
       <wsdl:operation name="search_movie">
 
          <wsdlsoap:operation soapAction=""/>
@@ -274,24 +292,6 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
          </wsdl:input>
 
          <wsdl:output name="movieNameResponse">
-
-            <wsdlsoap:body use="literal"/>
-
-         </wsdl:output>
-
-      </wsdl:operation>
-
-      <wsdl:operation name="genre">
-
-         <wsdlsoap:operation soapAction=""/>
-
-         <wsdl:input name="genreRequest">
-
-            <wsdlsoap:body use="literal"/>
-
-         </wsdl:input>
-
-         <wsdl:output name="genreResponse">
 
             <wsdlsoap:body use="literal"/>
 

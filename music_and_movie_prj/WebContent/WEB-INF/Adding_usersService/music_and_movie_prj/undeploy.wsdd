@@ -9,7 +9,7 @@
 <undeployment
     xmlns="http://xml.apache.org/axis/wsdd/">
 
-  <!-- Services from SearchingService WSDL service -->
+  <!-- Services from Adding_usersService WSDL service -->
 
-  <service name="Searching"/>
+  <service name="Adding_users"/>
 </undeployment>

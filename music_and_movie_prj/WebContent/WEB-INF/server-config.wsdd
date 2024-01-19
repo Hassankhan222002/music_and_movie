@@ -7,8 +7,8 @@
   <ns1:parameter name="dotNetSoapEncFix" value="true"/>
   <ns1:parameter name="enableNamespacePrefixOptimization" value="false"/>
   <ns1:parameter name="sendXMLDeclaration" value="true"/>
-  <ns1:parameter name="sendXsiTypes" value="true"/>
   <ns1:parameter name="attachments.implementation" value="org.apache.axis.attachments.AttachmentsImpl"/>
+  <ns1:parameter name="sendXsiTypes" value="true"/>
   <ns1:requestFlow>
    <ns1:handler type="java:org.apache.axis.handlers.JWSHandler">
     <ns1:parameter name="scope" value="session"/>
@@ -29,11 +29,11 @@
    <ns2:parameter qname="ns1:comment" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
   </ns2:operation>
   <ns1:parameter name="allowedMethods" value="getFeedback"/>
-  <ns1:parameter name="wsdlPortType" value="feedback"/>
   <ns1:parameter name="typeMappingVersion" value="1.2"/>
-  <ns1:parameter name="schemaQualified" value="http://music_and_movie_prj"/>
-  <ns1:parameter name="wsdlServicePort" value="feedback"/>
+  <ns1:parameter name="wsdlPortType" value="feedback"/>
   <ns1:parameter name="className" value="music_and_movie_prj.feedback"/>
+  <ns1:parameter name="wsdlServicePort" value="feedback"/>
+  <ns1:parameter name="schemaQualified" value="http://music_and_movie_prj"/>
   <ns1:parameter name="wsdlTargetNamespace" value="http://music_and_movie_prj"/>
   <ns1:parameter name="wsdlServiceElement" value="feedbackService"/>
  </ns1:service>
@@ -61,12 +61,12 @@
  </ns1:service>
  <ns1:service name="Searching" provider="java:RPC" style="wrapped" use="literal">
   <ns1:operation name="status" qname="ns4:status" returnQName="ns4:statusReturn" returnType="xsd:string" soapAction="" xmlns:ns4="http://music_and_movie_prj" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
-  <ns1:operation name="movieName" qname="ns5:movieName" returnQName="ns5:movieNameReturn" returnType="xsd:string" soapAction="" xmlns:ns5="http://music_and_movie_prj" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:operation name="category" qname="ns5:category" returnQName="ns5:categoryReturn" returnType="xsd:string" soapAction="" xmlns:ns5="http://music_and_movie_prj" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
   <ns1:operation name="genre" qname="ns6:genre" returnQName="ns6:genreReturn" returnType="xsd:string" soapAction="" xmlns:ns6="http://music_and_movie_prj" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
   <ns1:operation name="search_movie" qname="ns7:search_movie" returnQName="ns7:search_movieReturn" returnType="xsd:string" soapAction="" xmlns:ns7="http://music_and_movie_prj" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
    <ns1:parameter qname="ns7:name" type="xsd:string"/>
   </ns1:operation>
-  <ns1:operation name="category" qname="ns8:category" returnQName="ns8:categoryReturn" returnType="xsd:string" soapAction="" xmlns:ns8="http://music_and_movie_prj" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:operation name="movieName" qname="ns8:movieName" returnQName="ns8:movieNameReturn" returnType="xsd:string" soapAction="" xmlns:ns8="http://music_and_movie_prj" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
   <ns1:parameter name="allowedMethods" value="genre search_movie category movieName status"/>
   <ns1:parameter name="wsdlPortType" value="Searching"/>
   <ns1:parameter name="typeMappingVersion" value="1.2"/>

@@ -23,7 +23,7 @@
     if (request.getMethod().equalsIgnoreCase("post")) {
         // Retrieve user input
         String movieNameToSearch = request.getParameter("movieNameToSearch");
-		Searching search = new SearchingProxy().getSearching();
+        Searching search = new SearchingProxy().getSearching();
         // Search for the movie details
         search.search_movie(movieNameToSearch);
         // Display the movie details

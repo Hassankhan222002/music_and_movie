@@ -50,10 +50,10 @@ public class SearchingProxy implements music_and_movie_prj.Searching {
     return searching.status();
   }
   
-  public java.lang.String movieName() throws java.rmi.RemoteException{
+  public java.lang.String category() throws java.rmi.RemoteException{
     if (searching == null)
       _initSearchingProxy();
-    return searching.movieName();
+    return searching.category();
   }
   
   public java.lang.String genre() throws java.rmi.RemoteException{
@@ -68,10 +68,10 @@ public class SearchingProxy implements music_and_movie_prj.Searching {
     return searching.search_movie(name);
   }
   
-  public java.lang.String category() throws java.rmi.RemoteException{
+  public java.lang.String movieName() throws java.rmi.RemoteException{
     if (searching == null)
       _initSearchingProxy();
-    return searching.category();
+    return searching.movieName();
   }
   
   

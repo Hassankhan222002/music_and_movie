@@ -19,9 +19,9 @@
             <label id="icon"><i class="fas fa-user"></i></label>
             <input type="text" name="email" id="name" placeholder="email" required/>
             <label id="icon"><i class="fas fa-unlock-alt"></i></label>
-            <input type="password" name="category" id="name" placeholder="category" required/>
+            <input type="text" name="category" id="name" placeholder="category" required/>
             <label id="icon"><i class="fas fa-unlock-alt"></i></label>
-            <input type="password" name="comment" id="name" placeholder="comment" required/>
+            <input type="text" name="comment" id="name" placeholder="comment" required/>
             <hr>
             <hr>
             <div class="btn-block">

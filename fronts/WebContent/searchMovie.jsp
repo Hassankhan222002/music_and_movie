@@ -3,12 +3,16 @@
 <html>
 <head>
     <title>Movies And Music</title>
+    <link rel="stylesheet" href="styles.css">
+    
 </head>
 <body>
 
 
+	<header>
+		<h1>Search Movie</h1>
+	</header>
 
-<h1>Search Movie</h1>
 
 <!-- Form to search for a movie -->
 <form action="searchMovie.jsp" method="post">
@@ -46,7 +50,7 @@
 <%
     }
 %>
-<form action="Feedback.jsp">
+	<form action="Feedback.jsp">
         <div class="btn-block">
           <button>Feedback</button>
     	</div>

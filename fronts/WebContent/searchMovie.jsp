@@ -2,7 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Search Movie</title>
+    <title>Movies And Music</title>
 </head>
 <body>
 
@@ -46,6 +46,12 @@
 <%
     }
 %>
+<form action="Feedback.jsp">
+        <div class="btn-block">
+          <button>Feedback</button>
+    	</div>
+    </form>
+
 
 </body>
 </html>

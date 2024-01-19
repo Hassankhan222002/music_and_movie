@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Movies And Music</title>
 </head>
 <body>
 	<%
@@ -18,5 +18,11 @@
             feedbackService.getFeedback(email, category, comment);
         }
     %>
+    <h1>Your FeedBack is Submitted successfully</h1>
+    <form action="searchMovie.jsp">
+        <div class="btn-block">
+          <button>login</button>
+    	</div>
+    </form>
 </body>
 </html>

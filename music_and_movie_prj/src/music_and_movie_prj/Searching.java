@@ -15,8 +15,7 @@ public class Searching {
 			
 			
 			rs.next();
-			String movie_name=("name" + rs.getString(1) + "genre" + rs.getString(2) + " status "	+ rs.getString(3) +"category "+rs.getString(4));
-			movie_name = rs.getString(1);
+			movie_name = name;
 			genre = rs.getString(2);
 			status = rs.getString(3);
 			category = rs.getString(4);
@@ -27,6 +26,10 @@ public class Searching {
 			{
 			System.out.println(e);
 			}
+		movie_name="";
+		genre="";
+		status="";
+		category="";
 		return" ";
 			}
 	public static String movieName() {

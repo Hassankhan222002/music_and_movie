@@ -41,7 +41,7 @@
                 <th>Category</th>
             </tr>
             <tr>
-                <td><%= movieNameToSearch %></td>
+                <td><%= search.movieName() %></td>
         		<td><%= search.genre() %></td>
         		<td><%= search.status() %></td>
         		<td><%= search.category() %></td>

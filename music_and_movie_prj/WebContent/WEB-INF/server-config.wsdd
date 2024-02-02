@@ -41,11 +41,11 @@
   <ns1:operation name="main" qname="ns2:main" soapAction="" xmlns:ns2="http://music_and_movie_prj"/>
   <ns1:operation name="creating_user" qname="ns3:creating_user" soapAction="" xmlns:ns3="http://music_and_movie_prj"/>
   <ns1:parameter name="allowedMethods" value="creating_user main"/>
-  <ns1:parameter name="typeMappingVersion" value="1.2"/>
   <ns1:parameter name="wsdlPortType" value="Adding_users"/>
-  <ns1:parameter name="className" value="music_and_movie_prj.Adding_users"/>
-  <ns1:parameter name="wsdlServicePort" value="Adding_users"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
   <ns1:parameter name="schemaQualified" value="http://music_and_movie_prj"/>
+  <ns1:parameter name="wsdlServicePort" value="Adding_users"/>
+  <ns1:parameter name="className" value="music_and_movie_prj.Adding_users"/>
   <ns1:parameter name="wsdlTargetNamespace" value="http://music_and_movie_prj"/>
   <ns1:parameter name="wsdlServiceElement" value="Adding_usersService"/>
  </ns1:service>
